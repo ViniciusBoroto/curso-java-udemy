@@ -16,6 +16,7 @@ public class Program {
 		char initialDeposit;
 		String holder;
 		double deposit;
+		BankAccount bankAccount;
 		
 		System.out.println("Enter account number: ");
 		number = sc.nextInt();
@@ -23,16 +24,16 @@ public class Program {
 		sc.nextLine();
 		System.out.println("Enter account holder: ");
 		holder = sc.nextLine();
-		
-		BankAccount bankAccount = new BankAccount(number, holder);
-
 		System.out.println("Is there an initial deposit (y/n)?");
 		initialDeposit = sc.next().charAt(0);
 		
 		if (initialDeposit == 'y' || initialDeposit == 'Y') {
 			System.out.println("Enter initial deposit value: ");
 			deposit = sc.nextDouble();
-			bankAccount.deposit(deposit);
+			bankAccount = new BankAccount(number, holder, deposit);
+		}
+		else {
+			bankAccount = new BankAccount(number, holder);
 		}
 		
 		System.out.println();
