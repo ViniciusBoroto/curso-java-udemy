@@ -24,7 +24,7 @@ public class Program {
 			bimester2[i] = sc.nextDouble();
 			sc.nextLine();
 		}
-		
+		 
 		System.out.println("Alunos aprovados: ");
 		
 		for (int i = 0; i < names.length; i++) {
