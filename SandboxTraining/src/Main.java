@@ -1,21 +1,15 @@
-import java.util.Scanner;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class Main {
 	public static void main(String[] args) {
 
-		Scanner sc = new Scanner(System.in);
-		
-		int idade = sc.nextInt();
+		LocalDate d01 = LocalDate.now();
+		LocalDateTime d02 = LocalDateTime.now();
 
-		System.out.println("Insira sua idade");
-		if (idade > 18) {
-			System.out.println("É de maior!!");
-		}
-		else {
-			System.out.println("É de menor!!");
-		}
 		
-		
-		sc.close();
+		System.out.println(d01);
+		System.out.println(d02);
+		System.out.println("Pronto");
 	}
 }
