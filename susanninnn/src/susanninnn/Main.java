@@ -17,7 +17,7 @@ public class Main {
 			idade = sc.nextInt();
 		}
 		System.out.println("Você é de maior agora!");
-		
+		// teste git
 		sc.close();
 	}
 
