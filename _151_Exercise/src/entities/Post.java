@@ -12,7 +12,7 @@ public class Post {
 	
 	private List<Comment> comments = new ArrayList<>();
 
-	public Post( ) {
+	public Post( ) { 
 	}
 	
 	public Post(Date moment, String title, String content, int likes) {
