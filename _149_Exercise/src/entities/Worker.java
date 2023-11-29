@@ -18,9 +18,7 @@ public class Worker {
 	public Worker() {
 	}
 
-	public Worker(String name, WorkerLevel level, double baseSalary, Department department,
-			List<HourContract> contracts) {
-		super();
+	public Worker(String name, WorkerLevel level, double baseSalary, Department department) {
 		this.name = name;
 		this.level = level;
 		this.baseSalary = baseSalary;
