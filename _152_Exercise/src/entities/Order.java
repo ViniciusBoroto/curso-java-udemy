@@ -23,6 +23,7 @@ public class Order {
 		this.client = client;
 	}
 	
+	
 //	Getters And Setters
 
 	public Date getMoment() {
@@ -50,6 +51,13 @@ public class Order {
 	}
 	
 //	Methods
+	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Order moment: " + moment + "\n");
+		sb.append("Order status: " + status + "\n");
+		sb.append("Client: " + client.toString());
+	}
 	
 	public void addItem(OrderItem item) {
 		orderItems.add(item);

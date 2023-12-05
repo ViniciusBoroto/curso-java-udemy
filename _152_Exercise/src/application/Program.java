@@ -1,6 +1,6 @@
 package application;
 
-import java.text.SimpleDateFormat;
+//import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -14,7 +14,7 @@ public class Program {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+//		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
 		System.out.println("Enter client data: ");
 		System.out.print("Name: ");
@@ -28,10 +28,7 @@ public class Program {
 		System.out.println("Status: ");
 		String status = sc.nextLine();
 		System.out.println("How many items to this order? ");
-//		Para cada produto, criar um novo produto e um order item
-//			perguntar os atributos 
-//		Adicionar 
-		Order order = new Order(new Date(), status, client);
+		Order order = new Order(new Date(), OrderStatus.valueOf(status), client);
 		
 		
 		int productQty = sc.nextInt();
@@ -44,7 +41,9 @@ public class Program {
 			System.out.println("Quantity: ");
 			int qty = sc.nextInt();
 			Product product = new Product(productName, productPrice);
-			OrderItem order = new OrderItem(qty, product);
+			OrderItem orderItem = new OrderItem(qty, product);
+			order.addItem(orderItem);
+			
 		}
 
 		
