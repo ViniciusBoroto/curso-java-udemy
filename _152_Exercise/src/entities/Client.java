@@ -11,7 +11,7 @@ public class Client {
 	public Client(String name, String email, Date birthDate) {
 		this.name = name;
 		this.email = email;
-		this.birthDate = sdf.parse();
+		this.birthDate = ();
 	}
 
 	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
