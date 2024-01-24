@@ -8,10 +8,12 @@ public class Main {
 
 		int inputNum = -121;
 		String inputStr = String.valueOf(inputNum);
-		String[] charArray = inputStr.split("");
-		for (String s : charArray) {
-			System.out.println(s);
-		}
+//		String[] charArray = inputStr.split("");
+//		for (String s : charArray) {
+//			System.out.println(s);
+		
+//		}
+
 		
 	}
 }
