@@ -1,19 +1,10 @@
-import java.time.Instant;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Main {
 	public static void main(String[] args) {
 
-		int inputNum = -121;
-		String inputStr = String.valueOf(inputNum);
-//		String[] charArray = inputStr.split("");
-//		for (String s : charArray) {
-//			System.out.println(s);
-		
-//		}
-
-		
+		SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yyyy");
+		System.out.println(sdf1.format(new Date()));
 	}
 }
