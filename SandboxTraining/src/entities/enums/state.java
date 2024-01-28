@@ -6,4 +6,5 @@ public enum state {
 	PROCESSING,
 	SHIPPED,
 	DELIVERED;
+	
 }
