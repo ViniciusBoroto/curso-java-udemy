@@ -30,15 +30,16 @@ public class Program {
 		System.out.println("Enter order data: ");
 		System.out.println("Status: ");
 		String status = sc.next();
-		System.out.println();
+		sc.nextLine();
 		Order order = new Order(new Date(), status);
 		
 		System.out.println("How many items to this order? ");
 		int itemsQty = sc.nextInt();
 		System.out.println();
 		for (int i = 0; i < itemsQty; i++) {
-			System.out.println("Enter #" + i + 1 + " item data: ");
+			System.out.println("Enter #" + (i + 1) + " item data: ");
 			System.out.println("Product name: ");
+			sc.nextLine();
 			String prodName = sc.nextLine();
 			System.out.println("Product price: ");
 			Double price = sc.nextDouble();
