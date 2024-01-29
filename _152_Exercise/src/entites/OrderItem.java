@@ -3,35 +3,18 @@ package entites;
 public class OrderItem {
 
 	private Integer quantity;
-	private Double price;
+	private Product product;
 	
-	public OrderItem(Integer quantity, Double price) {
-		super();
+	public OrderItem(Product product, Integer quantity) {
 		this.quantity = quantity;
-		this.price = price;
+		this.product = product;
 	}
 
-	public Integer getQuantity() {
-		return quantity;
-	}
-
-	public void setQuantity(Integer quantity) {
-		this.quantity = quantity;
-	}
-
-	public Double getPrice() {
-		return price;
-	}
-
-	public void setPrice(Double price) {
-		this.price = price;
-	}
-	
 	public String toString() {
-		return String.format("%s, $%.2f, Quantity: %d, Subtotal: $%.2f", )
+		return String.format("%s, $%.2f, Quantity: %d, Subtotal: $%.2f", product.getName(), product.getPrice(), quantity, subTotal());
 	}
 	
 	public Double subTotal() {
-		return quantity * price;
+		return quantity * product.getPrice();
 	}
 }

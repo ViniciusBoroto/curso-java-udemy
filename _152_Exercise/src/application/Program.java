@@ -1,7 +1,6 @@
 package application;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -47,7 +46,7 @@ public class Program {
 			System.out.println("Quantity: ");
 			int qty = sc.nextInt();
 			Product product = new Product(prodName, price);
-			OrderItem orderItem = new OrderItem(qty, product.getPrice());
+			OrderItem orderItem = new OrderItem(product, qty);
 			order.addItem(orderItem);
 		}
 		System.out.println(order);
