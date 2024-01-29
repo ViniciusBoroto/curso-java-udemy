@@ -39,4 +39,7 @@ public class Client {
 		this.birthDate = birthDate;
 	}
 	
+	public String toString() {
+		return name + " (" + Order.sdf.format(birthDate) + ") - " + email;
+	}
 }

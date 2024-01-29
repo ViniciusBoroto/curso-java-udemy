@@ -27,6 +27,10 @@ public class OrderItem {
 		this.price = price;
 	}
 	
+	public String toString() {
+		return String.format("%s, $%.2f, Quantity: %d, Subtotal: $%.2f", )
+	}
+	
 	public Double subTotal() {
 		return quantity * price;
 	}

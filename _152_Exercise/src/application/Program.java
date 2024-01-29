@@ -13,7 +13,7 @@ import entites.Product;
 public class Program {
 
 	public static void main(String[] args) throws ParseException {
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter client data: ");
@@ -23,7 +23,7 @@ public class Program {
 		String email = sc.nextLine();
 		System.out.println("Birth Date (DD/MM/YYYY): ");
 		String s_birth = sc.next();
-		Date birthDate = sdf.parse(s_birth);
+		Date birthDate = Order.sdf.parse(s_birth);
 		System.out.println("");
 		Client client = new Client(name, email, birthDate);
 		
@@ -31,7 +31,7 @@ public class Program {
 		System.out.println("Status: ");
 		String status = sc.next();
 		sc.nextLine();
-		Order order = new Order(new Date(), status);
+		Order order = new Order(client, new Date(), status);
 		
 		System.out.println("How many items to this order? ");
 		int itemsQty = sc.nextInt();
